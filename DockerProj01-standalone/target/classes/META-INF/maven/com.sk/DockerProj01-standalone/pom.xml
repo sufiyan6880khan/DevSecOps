@@ -43,8 +43,14 @@
   </dependencies>
 
   <build>
+  
+    <finalName>mavenApp1</finalName>
+  
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+      
+      
+      
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -66,6 +72,13 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
+           <configuration>
+                <archive>
+                    <manifestEntries>
+                        <Main-Class>com.sk.DockerProj01_standalone.App</Main-Class> <!-- Replace with your main class -->
+                    </manifestEntries>
+                </archive>
+            </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
